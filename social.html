@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Social Media</title>
+   <style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f4f6;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #eb4918;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.social-links a {
+    color: #4CAF50;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* Social Feed */
+.social-feed {
+    padding: 20px;
+    text-align: center;
+}
+
+#posts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Comment Form */
+.comment-form {
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.comment-form h2 {
+    margin-bottom: 10px;
+}
+
+#commentForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#commentForm input,
+#commentForm textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#commentForm button {
+    padding: 10px;
+    background-color: #e96c23;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#commentForm button:hover {
+    background-color: #45a049;
+}
+
+#comments {
+    margin-top: 20px;
+}
+   </style>
+</head>
+<body>
+    <header>
+        <h1>Follow Us on Social Media!</h1>
+        <p>Stay updated with our latest dishes, offers, and events.</p>
+    </header>
+
+    <!-- Social Media Links -->
+    <section class="social-links">
+        <a href="homepage.html">Home</a>
+        <a href="https://facebook.com" target="_blank">Facebook</a>
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+        <a href="https://twitter.com" target="_blank">Twitter</a>
+    </section>
+
+    <!-- Social Feed -->
+    <section class="social-feed">
+        <h2>Our Latest Posts</h2>
+        <div id="posts"></div>
+    </section>
+
+    <!-- Comment Form -->
+    <section class="comment-form">
+        <h2>Leave a Comment</h2>
+        <form id="commentForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <textarea id="comment" placeholder="Your Comment" required></textarea>
+            <button type="submit">Post Comment</button>
+        </form>
+        <div id="comments"></div>
+    </section>
+
+    <script>
+        // Dummy social media posts
+const posts = [
+    { message: "Try our new seasonal dishes!", date: "2024-10-05" },
+    { message: "We are open for delivery! Order now!", date: "2024-10-01" },
+    { message: "Book a table for special events!", date: "2024-09-28" },
+];
+
+// Load posts into the page
+function loadPosts() {
+    const postContainer = document.getElementById("posts");
+    posts.forEach(post => {
+        const postDiv = document.createElement("div");
+        postDiv.classList.add("post");
+        postDiv.innerHTML = `<p>${post.message}</p><small>${post.date}</small>`;
+        postContainer.appendChild(postDiv);
+    });
+}
+
+// Add comment functionality
+document.getElementById("commentForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const name = document.getElementById("name").value;
+    const comment = document.getElementById("comment").value;
+    const commentsContainer = document.getElementById("comments");
+
+    const commentDiv = document.createElement("div");
+    commentDiv.classList.add("comment");
+    commentDiv.innerHTML = `<strong>${name}</strong>: ${comment}`;
+    
+    commentsContainer.appendChild(commentDiv);
+
+    // Clear form
+    document.getElementById("name").value = "";
+    document.getElementById("comment").value = "";
+});
+
+// Initialize
+document.addEventListener("DOMContentLoaded", loadPosts);
+    </script>
+</body>
+</html>

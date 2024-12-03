@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/gallery.css">
+    <title>Restaurant Gallery</title>
+</head>
+<body>
+    <header>
+        <h1>Restaurant Gallery</h1>
+    </header>
+    <main>
+        <div class="gallery">
+            <img src="images/istockphoto-2149219718-612x612.webp" alt=" 1" class="gallery-item">
+            <img src="images/pexels-photo-262047.jpeg" alt=" 2" class="gallery-item">
+            <img src="images/pexels-photo-776538.webp" alt=" 3" class="gallery-item">
+            <img src="images/photo-1488992783499-418eb1f62d08.avif" alt=" 4" class="gallery-item">
+            <img src="images/photo-1505275350441-83dcda8eeef5.avif" alt=" 5" class="gallery-item">
+            <img src="images/photo-1514933651103-005eec06c04b.avif" alt=" 6" class="gallery-item">
+            <img src="images/premium_photo-1661433201283-fcb240e88ad4.avif" alt="7" class="gallery-item">
+        </div>
+    </main>
+
+    <div id="modal" class="modal">
+        <span class="close" id="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="caption"></div>
+    </div>
+
+    <script >
+        document.querySelectorAll('.gallery-item').forEach(item => {
+    item.addEventListener('click', event => {
+        
+        const modal = document.getElementById('modal');
+        const modalImg = document.getElementById('modal-img');
+        const captionText = document.getElementById('caption');
+
+        modal.style.display = "block";
+        modalImg.src = event.target.src;
+        captionText.innerHTML = event.target.alt;
+    });
+});
+
+document.getElementById('close').onclick = function() {
+    document.getElementById('modal').style.display = "none";
+}
+    </script>
+</body>
+</html>

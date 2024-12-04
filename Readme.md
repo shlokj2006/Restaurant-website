@@ -2,7 +2,7 @@
 
 Restaurant Website
 Overview
-Welcome to the Restaurant Website project! This is a static website built using HTML, CSS, and JavaScript, with React and Bootstrap as the primary libraries. The website is designed to provide an engaging user experience for visitors looking to explore the restaurant's offerings, make reservations, and learn more about the establishment.
+Welcome to the Restaurant Website project! This is a static website built using HTML, CSS, and JavaScript, jquery and  Bootstrap as the primary librarie. The website is designed to provide an engaging user experience for visitors looking to explore the restaurant's offerings, make reservations, and learn more about the establishment.
 
 Features
 Home Page: A welcoming introduction to the restaurant with highlights of key offerings.

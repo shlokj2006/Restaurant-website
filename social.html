@@ -13,7 +13,7 @@
     color: #333;
 }
 
-/* Header */
+
 header {
     background-color: #eb4918;
     color: white;
@@ -21,7 +21,7 @@ header {
     text-align: center;
 }
 
-/* Social Links */
+
 .social-links {
     display: flex;
     justify-content: center;
@@ -39,7 +39,7 @@ header {
     text-decoration: underline;
 }
 
-/* Social Feed */
+
 .social-feed {
     padding: 20px;
     text-align: center;
@@ -52,7 +52,7 @@ header {
     gap: 15px;
 }
 
-/* Comment Form */
+
 .comment-form {
     padding: 20px;
     background-color: #ffffff;
@@ -99,7 +99,7 @@ header {
         <p>Stay updated with our latest dishes, offers, and events.</p>
     </header>
 
-    <!-- Social Media Links -->
+    
     <section class="social-links">
         <a href="homepage.html">Home</a>
         <a href="https://facebook.com" target="_blank">Facebook</a>
@@ -107,13 +107,13 @@ header {
         <a href="https://twitter.com" target="_blank">Twitter</a>
     </section>
 
-    <!-- Social Feed -->
+    
     <section class="social-feed">
         <h2>Our Latest Posts</h2>
         <div id="posts"></div>
     </section>
 
-    <!-- Comment Form -->
+   
     <section class="comment-form">
         <h2>Leave a Comment</h2>
         <form id="commentForm">
@@ -125,44 +125,15 @@ header {
     </section>
 
     <script>
-        // Dummy social media posts
+       
 const posts = [
     { message: "Try our new seasonal dishes!", date: "2024-10-05" },
     { message: "We are open for delivery! Order now!", date: "2024-10-01" },
     { message: "Book a table for special events!", date: "2024-09-28" },
 ];
 
-// Load posts into the page
-function loadPosts() {
-    const postContainer = document.getElementById("posts");
-    posts.forEach(post => {
-        const postDiv = document.createElement("div");
-        postDiv.classList.add("post");
-        postDiv.innerHTML = `<p>${post.message}</p><small>${post.date}</small>`;
-        postContainer.appendChild(postDiv);
-    });
-}
 
-// Add comment functionality
-document.getElementById("commentForm").addEventListener("submit", function (e) {
-    e.preventDefault();
-    const name = document.getElementById("name").value;
-    const comment = document.getElementById("comment").value;
-    const commentsContainer = document.getElementById("comments");
 
-    const commentDiv = document.createElement("div");
-    commentDiv.classList.add("comment");
-    commentDiv.innerHTML = `<strong>${name}</strong>: ${comment}`;
-    
-    commentsContainer.appendChild(commentDiv);
-
-    // Clear form
-    document.getElementById("name").value = "";
-    document.getElementById("comment").value = "";
-});
-
-// Initialize
-document.addEventListener("DOMContentLoaded", loadPosts);
     </script>
 </body>
 </html>

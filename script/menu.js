@@ -11,7 +11,7 @@
     function validateDiscountCode() {
         const code = document.getElementById('discountCode').value;
         const message = document.getElementById('discountMessage');
-        if (code === 'Diwali10') {
+        if (code === '2025') {
             message.textContent = 'Discount code applied! You will receive 10% off your order.';
         } else {
             message.textContent = 'Invalid discount code. Please try again.';

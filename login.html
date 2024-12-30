@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="CSS/login.css">
 </head>
 <body>
+  <section id="login">
     <div class="login-container">
         <h1>Restaurant Employee Login</h1>
-        <form action="login_process.php" method="post">
+        <form>
             <div class="form-group">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required>
@@ -18,8 +19,9 @@
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
             </div>
-            <button type="submit" class="login-button">Login</button>
+            <button type="submit" class="login-button"><a href="homepage.html">Login</a></button>
         </form>
     </div>
+</section>
 </body>
 </html>

@@ -1,12 +1,3 @@
-
-    // Function to handle adding items to the order
-    let order = [];
-
-    function addToOrder(itemName, itemPrice) {
-        order.push({ name: itemName, price: itemPrice });
-        alert(`${itemName} has been added to your order.`);
-    }
-
     // Function to validate discount code
     function validateDiscountCode() {
         const code = document.getElementById('discountCode').value;
